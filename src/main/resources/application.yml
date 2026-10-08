@@ -1,0 +1,17 @@
+server:
+  port: 9999
+
+spring:
+  threads:
+    virtual:
+      enabled: true
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.1
+    typesafe:
+      base-url: http://localhost:11434
+      model: tev1:0.8b
+      api-key: ollama                    # Ollama ignores it; Jev cloud requires a valid key
